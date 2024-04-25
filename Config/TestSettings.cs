@@ -1,11 +1,14 @@
-﻿namespace Playwright_Automation_Framework.Config;
+﻿using Playwright_Automation_Framework.Driver;
+
+namespace Playwright_Automation_Framework.Config;
 
 public class TestSettings
 {
-    public string[] Args { get; set; }
-    public bool Headless { get; set; }
-    public int SlowMo { get; set; }
-    public float Timeout { get; set; }
+    public float? Timeout = PlaywrightDriverInitializer.DEFAULT_TIMEOUT;
+    public string ApplicationURL { get; set; }
+    public string[]? Args { get; set; }
+    public bool? Headless { get; set; }
+    public float? SlowMo { get; set; }
     public DriverType DriverType { get; set; }
 }
 
