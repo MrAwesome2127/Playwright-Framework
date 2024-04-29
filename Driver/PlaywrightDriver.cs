@@ -2,7 +2,7 @@
 
 namespace Playwright_Automation_Framework.Driver;
 
-public class PlaywrightDriver : IDisposable
+public class PlaywrightDriver : IDisposable, IPlaywrightDriver
 {
     private readonly AsyncTask<IPage> _page;
     private readonly AsyncTask<IBrowser> _browser;
